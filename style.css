@@ -1,0 +1,146 @@
+/* Basic resets and typography */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  h2 {
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .error-msg {
+    color: red;
+    margin: 5px 0;
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+  }
+  nav button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  nav button:hover {
+    background-color: #777;
+  }
+  
+  /* Form styles */
+  form {
+    max-width: 400px;
+    margin: 15px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  form div {
+    margin-bottom: 10px;
+  }
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  form button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Product listing cards */
+  #productList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: 280px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .product-card h3 {
+    margin: 5px 0;
+  }
+  .product-card p {
+    margin: 5px 0;
+  }
+  .product-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+  .product-card button:hover {
+    background-color: #0069d9;
+  }
+  
+  /* Cart and Orders sections */
+  #cartSection, #ordersSection, #vendorOrdersSection {
+    background: #fff;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 600px;
+    border: 1px solid #ccc;
+  }
+  #cartSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+  #cartSection li {
+    margin: 5px 0;
+  }
+  #ordersList, #vendorOrdersList {
+    list-style: none;
+    padding: 0;
+  }
+  #ordersList li, #vendorOrdersList li {
+    margin: 5px 0;
+  }
+  
+  /* Responsive adjustments for small screens */
+  @media (max-width: 600px) {
+    nav button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+    #productList {
+      flex-direction: column;
+      align-items: center;
+    }
+    .product-card {
+      width: 90%;
+    }
+  }
+  

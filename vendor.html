@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <button id="showUploadBtn">Upload Product</button>
+    <button id="showVendorOrdersBtn">Orders Received</button>
+    <button id="showProfileBtn">My Profile</button>
+    <button id="logoutBtn">Logout</button>
+  </nav>
+
+  <section id="uploadSection">
+    <h2>Upload New Product</h2>
+    <form id="uploadForm">
+      <div>
+        <label for="prodName">Product Name:</label>
+        <input type="text" id="prodName" required />
+      </div>
+      <div>
+        <label for="prodDesc">Description:</label>
+        <textarea id="prodDesc" required></textarea>
+      </div>
+      <div>
+        <label for="prodPrice">Price:</label>
+        <input type="number" id="prodPrice" required />
+      </div>
+      <div>
+        <label for="productImage">Product Image:</label>
+        <input type="file" id="productImage" accept="image/*" required />
+      </div>
+      <button type="submit">Upload Product</button>
+      <p id="uploadMsg"></p>  <!-- Message area for upload success/error -->
+    </form>
+  </section>
+
+  <section id="vendorOrdersSection" style="display:none;">
+    <h2>Orders on My Products</h2>
+    <ul id="vendorOrdersList"></ul>
+  </section>
+
+  <section id="profileSection" style="display:none;">
+    <h2>My Profile</h2>
+    <form id="profileForm">
+      <div>
+        <label for="profileName">Name:</label>
+        <input type="text" id="profileName" required />
+      </div>
+      <div>
+        <label for="profileEmail">Email:</label>
+        <input type="email" id="profileEmail" disabled />
+      </div>
+      <button type="submit">Update Profile</button>
+      <p id="profileMsg"></p>
+    </form>
+  </section>
+
+  <!-- Firebase SDKs and init -->
+  <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-storage-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <!-- Vendor module script -->
+  <script src="js/vendor.js"></script>
+</body>
+</html>
